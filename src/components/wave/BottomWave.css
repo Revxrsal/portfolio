@@ -1,0 +1,20 @@
+.bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.bottom-wave svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1px);
+    height: 89px;
+}
+
+.bottom-wave .shape-fill {
+    fill: #0D9488;
+}
