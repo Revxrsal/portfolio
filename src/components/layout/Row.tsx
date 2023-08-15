@@ -6,5 +6,5 @@ export interface RowProps extends ComponentProps<"div"> {
 
 export default function Row(props: RowProps) {
     const [local, div] = splitProps(props, ["class"]);
-    return <div class={`flex flex-row ${local.class || ""}`} {...div} />;
+    return <div class={`flex flex-row items-center ${local.class || ""}`} {...div} />;
 }
