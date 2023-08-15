@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    @apply m-0 overflow-x-hidden
+    bg-stone-200 dark:bg-stone-900;
+}
+
+main {
+    @apply flex flex-col mt-[150px] mb-[89px];
+}
+
+@layer components {
+    .text {
+        @apply text-stone-800 dark:text-stone-200
+        selection:bg-emerald-500 dark:selection:bg-emerald-700
+        selection:bg-opacity-50 dark:selection:bg-opacity-50;
+    }
+
+    .fill {
+        @apply fill-stone-800 dark:fill-stone-200;
+    }
+
+    .center {
+        @apply items-center content-center;
+    }
+}
