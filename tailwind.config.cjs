@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+    darkMode: "class",
     theme: {
         extend: {
             keyframes: {
@@ -26,7 +27,7 @@ module.exports = {
                 },
                 float: {
                     '0%, 100%': {
-                        transform: 'translateY(15%)'
+                        transform: 'translateY(5%)'
                     },
                     '50%': {
                         transform: 'none'
@@ -35,7 +36,7 @@ module.exports = {
             },
             animation: {
                 typing: "typing 1.5s steps(20) infinite alternate, blink .7s infinite",
-                float: 'float 3s ease-in-out infinite',
+                float: 'float 5s ease-in-out infinite',
             }
         }
     },
