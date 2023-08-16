@@ -17,7 +17,7 @@ const development = [
     "Minecraft mods"
 ]
 
-export default function Home() {
+function Experience() {
     const [currentDev, setCurrentDev] = createSignal(development[0]);
     onMount(() => {
         let index = 0;
@@ -27,23 +27,31 @@ export default function Home() {
         }, 3000)
         onCleanup(() => clearInterval(interval))
     })
-    return (
-        <main>
-            <TopWave/>
-            <Column>
-                <Header size={6}>Hello 👋, I'm Ali </Header>
-                <Row>
-                    <Header size={3} class={"w-max mr-3 whitespace-nowrap"}>I've done</Header>
-                    <div class={"w-max"}>
-                        <Text
-                            class={`text-3xl underline font-mono my-12 animate-typing pr-1
+    return <Row>
+        <Header size={3} class={"lg:text-3xl text-xl w-max mr-3 whitespace-nowrap"}>I've done</Header>
+        <div class={"w-max"}>
+            <Text
+                class={`lg:text-3xl text-xl underline font-mono my-12 animate-typing pr-1
                         brightness-75 overflow-hidden border-r-2 border-r-stone-800 dark:border-r-white 
                         whitespace-nowrap`}
-                        >{currentDev()}</Text>
-                    </div>
+            >{currentDev()}</Text>
+        </div>
+    </Row>
+}
+
+export default function Home() {
+    return (
+        <>
+            <main>
+                <TopWave/>
+                <Row class={"justify-evenly"}>
+                    <Column>
+                        <h1 class={"text font-bold lg:m-12 lg:text-6xl text-3xl"}>Hello 👋, I'm Ali </h1>
+                        <Experience/>
+                    </Column>
+                    <img src="/desktop-computer.png" alt="Desktop computer" class={"lg:w-96 lg:h-96 w-32 h-32 animate-float"}/>
                 </Row>
-            </Column>
-            <BottomWave/>
-        </main>
-    );
+                <BottomWave/>
+            </main>
+        </>);
 }
