@@ -2,7 +2,42 @@
 module.exports = {
     content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
     theme: {
-        extend: {}
+        extend: {
+            keyframes: {
+                typing: {
+                    "0%": {
+                        width: "0%",
+                        visibility: "hidden"
+                    },
+                    "70%": {
+                        width: "100%"
+                    },
+                    "100%": {
+                        width: "100%"
+                    }
+                },
+                blink: {
+                    "50%": {
+                        borderColor: "transparent"
+                    },
+                    "100%": {
+                        borderColor: "white"
+                    }
+                },
+                float: {
+                    '0%, 100%': {
+                        transform: 'translateY(15%)'
+                    },
+                    '50%': {
+                        transform: 'none'
+                    },
+                }
+            },
+            animation: {
+                typing: "typing 1.5s steps(20) infinite alternate, blink .7s infinite",
+                float: 'float 3s ease-in-out infinite',
+            }
+        }
     },
     safelist: [
         {
