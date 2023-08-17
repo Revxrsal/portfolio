@@ -56,23 +56,23 @@ export const Frameworks: Record<string, RowData[]> = {
             {icon: () => <SiUnrealengine size={80}/>}
         ],
     ],
-    "Web": [
-        [
-            {icon: () => <SiHtml5 size={80}/>},
-            {icon: () => <SiJavascript size={80}/>},
-            {icon: () => <SiTypescript size={80}/>},
-        ],
-        [
-            {icon: () => <SiSolid size={80}/>},
-            {icon: () => <SiTauri size={80}/>},
-            {icon: () => <SiTailwindcss size={80}/>},
-        ],
-        [
-            {icon: () => <SiSvelte size={80}/>},
-            {icon: () => <SiReact size={80}/>},
-            {icon: () => <SiNextdotjs size={80}/>},
-        ]
-    ],
+    // "Web": [
+    //     [
+    //         {icon: () => <SiHtml5 size={80}/>},
+    //         {icon: () => <SiJavascript size={80}/>},
+    //         {icon: () => <SiTypescript size={80}/>},
+    //     ],
+    //     [
+    //         {icon: () => <SiSolid size={80}/>},
+    //         {icon: () => <SiTauri size={80}/>},
+    //         {icon: () => <SiTailwindcss size={80}/>},
+    //     ],
+    //     [
+    //         {icon: () => <SiSvelte size={80}/>},
+    //         {icon: () => <SiReact size={80}/>},
+    //         {icon: () => <SiNextdotjs size={80}/>},
+    //     ]
+    // ],
     "Databases": [
         [
             {icon: () => <SiFirebase size={80}/>},
