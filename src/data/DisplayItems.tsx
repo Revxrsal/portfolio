@@ -32,16 +32,6 @@ export interface FrameworkItem {
 
 export type RowData = [FrameworkItem, FrameworkItem, FrameworkItem]
 
-export const Development = [
-    "systems programming",
-    "Android apps",
-    "desktop apps",
-    "back-end development",
-    "front-end development",
-    "game development",
-    "networking",
-]
-
 export const Frameworks: Record<string, RowData[]> = {
     "JVM / Android": [
         [
