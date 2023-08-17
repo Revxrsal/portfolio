@@ -17,7 +17,7 @@ export default function Home() {
         <main>
             <Flex class={"center flex-col lg:flex-row justify-evenly"}>
                 <Text class={"text-6xl lg:text-7xl font-bold lg:m-12 text-center"}>
-                    Hello 👋 <span class={"visible lg:hidden"}><br/></span> I'm Ali
+                    Hello 👋 <span class={"visible lg:sr-only"}><br/></span> I'm Ali
                 </Text>
                 <img src="/desktop-computer.png" alt="Desktop computer"
                      class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
