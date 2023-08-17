@@ -51,8 +51,8 @@ export const Frameworks: Record<string, RowData[]> = {
     ],
     "Systems": [
         [
-            {icon: () => <SiRust size={80}/>},
             {icon: () => <SiGo size={80}/>},
+            {icon: () => <SiRust size={80}/>},
             {icon: () => <SiUnrealengine size={80}/>}
         ],
     ],
