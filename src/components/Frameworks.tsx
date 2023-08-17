@@ -1,8 +1,8 @@
-import {Frameworks} from "~/data/DisplayItems";
 import Divider from "~/components/decoration/Divider";
 import Header from "~/components/typography/Header";
 import {For, JSX} from "solid-js";
 import Row from "~/components/layout/Row";
+import {Frameworks} from "~/data/DisplayItems";
 
 function LanguageIcon(props: {
     children: JSX.Element;
@@ -13,7 +13,7 @@ function LanguageIcon(props: {
     </div>
 }
 
-export default function Info() {
+export default function DisplayFrameworks() {
     return <For each={Object.entries(Frameworks)}>{([name, items]) =>
         <>
             <Divider class={"mx-10 my-6"}/>
