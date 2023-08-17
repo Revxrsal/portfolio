@@ -37,18 +37,18 @@ export const Development = [
 ]
 
 export const Frameworks: Record<string, RowData[]> = {
-    "JVM / Android": [
-        [
-            {icon: () => <SiKotlin size={80}/>},
-            {icon: () => <FaBrandsJava size={80}/>},
-            {icon: () => <SiAndroid size={80}/>}
-        ],
-        [
-            {icon: () => <SiSpringboot size={80}/>},
-            {icon: () => <SiJetpackcompose size={80}/>},
-            {icon: () => <SiGradle size={80}/>}
-        ],
-    ],
+    // "JVM / Android": [
+    //     [
+    //         {icon: () => <SiKotlin size={80}/>},
+    //         {icon: () => <FaBrandsJava size={80}/>},
+    //         {icon: () => <SiAndroid size={80}/>}
+    //     ],
+    //     [
+    //         {icon: () => <SiSpringboot size={80}/>},
+    //         {icon: () => <SiJetpackcompose size={80}/>},
+    //         {icon: () => <SiGradle size={80}/>}
+    //     ],
+    // ],
     "Systems": [
         [
             {icon: () => <SiGo size={80}/>},
