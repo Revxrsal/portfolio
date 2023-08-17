@@ -6,10 +6,10 @@ import Spacer from "~/components/decoration/Spacer";
 import Divider from "~/components/decoration/Divider";
 import {Development} from "~/data/DisplayItems";
 import Text from "~/components/typography/Text";
-import {VsCopy, VsLinkExternal} from "solid-icons/vs";
-import {AiOutlineMail} from "solid-icons/ai";
-import {BsDiscord} from "solid-icons/bs";
-import {FaSolidPhone} from "solid-icons/fa";
+import {VsCopy, VsLinkExternal} from "~/components/icons/vs";
+import {AiOutlineMail} from "~/components/icons/ai";
+import {BsDiscord} from "~/components/icons/bs";
+import {FaSolidPhone} from "~/components/icons/fa";
 import IconButton from "~/components/button/IconButton";
 import DisplayFrameworks from "~/components/Frameworks";
 
