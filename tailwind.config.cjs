@@ -42,7 +42,7 @@ module.exports = {
     },
     safelist: [
         {
-            pattern: /text-(base|xl|2xl|3xl|4xl|5xl|6xl)/,
+            pattern: /text-(base|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)/,
         },
     ],
     plugins: []

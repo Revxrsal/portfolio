@@ -1,7 +1,7 @@
 import { ComponentProps, splitProps } from "solid-js";
 
 export interface HeaderProps extends ComponentProps<"h1"> {
-    size?: 1 | 2 | 3 | 4 | 5 | 6;
+    size?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
     class?: string;
 }
 
