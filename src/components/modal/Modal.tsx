@@ -1,5 +1,5 @@
-import { IoClose } from "solid-icons/io";
-import { Accessor, createEffect, JSX, onCleanup, Setter, Show } from "solid-js";
+import {IoClose} from "~/components/icons/io";
+import {Accessor, createEffect, JSX, onCleanup, Setter, Show} from "solid-js";
 import "./Modal.css";
 
 export interface ModalProps {
@@ -26,12 +26,12 @@ export default function Modal(props: ModalProps) {
             const firstFocusableElement =
                 modalFocusableElements?.[0] as HTMLElement;
             const lastFocusableElement = modalFocusableElements?.[
-                modalFocusableElements.length - 1
-            ] as HTMLElement;
+            modalFocusableElements.length - 1
+                ] as HTMLElement;
 
             // eslint-disable-next-line no-inner-declarations
             function focusTrap(e: KeyboardEvent) {
-                const { key, code, shiftKey } = e;
+                const {key, code, shiftKey} = e;
                 const isTabPressed = (key || code) === "Tab";
                 const isEscape = (key || code) === "Escape";
                 if (!isTabPressed && !isEscape) return;
@@ -76,7 +76,7 @@ export default function Modal(props: ModalProps) {
                             class="hover:bg-emerald-500 dark:hover:bg-emerald-700 group transition h-12 w-12 fill text justify-center items-center flex rounded"
                             onClick={() => close()}
                         >
-                            <IoClose size={24} />
+                            <IoClose size={24}/>
                         </button>
                     </header>
                     <div class="modalBody">{props.children}</div>

@@ -1,24 +1,30 @@
 import {
-    SiAndroid, SiFirebase,
+    SiAndroid,
+    SiFirebase,
     SiGo,
     SiGradle,
     SiHtml5,
     SiJavascript,
     SiJetpackcompose,
-    SiKotlin, SiMysql,
-    SiNextdotjs, SiPostgresql,
-    SiReact, SiRedis,
+    SiKotlin,
+    SiMysql,
+    SiNextdotjs,
+    SiPostgresql,
+    SiReact,
+    SiRedis,
     SiRust,
     SiSolid,
-    SiSpringboot, SiSqlite, SiSupabase,
+    SiSpringboot,
+    SiSqlite,
+    SiSupabase,
     SiSvelte,
     SiTailwindcss,
     SiTauri,
     SiTypescript,
     SiUnrealengine
-} from "solid-icons/si";
-import {FaBrandsJava} from "solid-icons/fa";
+} from "~/components/icons/si";
 import {JSX} from "solid-js";
+import {FaBrandsJava} from "~/components/icons/fa";
 
 export interface FrameworkItem {
     icon: () => JSX.Element
