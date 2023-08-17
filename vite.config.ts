@@ -4,7 +4,6 @@ import vercel from "solid-start-vercel";
 
 export default defineConfig({
     plugins: [
-        // solid({ ssr: false })
-        solid({adapter: vercel({edge: false})})
+        solid({adapter: vercel({edge: true})})
     ],
 });
