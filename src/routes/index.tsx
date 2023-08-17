@@ -47,7 +47,7 @@ export default function Home() {
                     <Experience/>
                 </Column>
                 <img src="/desktop-computer.png" alt="Desktop computer"
-                     class={"lg:w-96 lg:h-96 w-32 h-32 animate-float"}/>
+                     class={"lg:w-96 lg:h-96 w-32 h-32 animate-float image-non-draggable"}/>
             </Row>
             <Spacer class={"my-10"}/>
             <Column>
