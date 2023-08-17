@@ -2,10 +2,12 @@
 import {Suspense} from "solid-js";
 import {Body, ErrorBoundary, FileRoutes, Head, Html, Link, Meta, Routes, Scripts, Title,} from "solid-start";
 import "./root.css";
+import TopWave from "~/components/wave/TopWave";
+import BottomWave from "~/components/wave/BottomWave";
 
 export default function Root() {
     return (
-        <Html lang="en">
+        <Html lang="en" class="dark">
             <Head>
                 <Title>Ali</Title>
                 <Meta charset="utf-8"/>
@@ -19,9 +21,15 @@ export default function Root() {
             <Body>
                 <Suspense>
                     <ErrorBoundary>
+                        <header class={"absolute w-full"}>
+                            <TopWave/>
+                        </header>
                         <Routes>
                             <FileRoutes/>
                         </Routes>
+                        <footer class={"absolute w-full"}>
+                            <BottomWave/>
+                        </footer>
                     </ErrorBoundary>
                 </Suspense>
                 <Scripts/>
