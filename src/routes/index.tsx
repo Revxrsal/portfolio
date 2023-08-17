@@ -1,24 +1,25 @@
 import Header from "~/components/typography/Header";
 import Column from "~/components/layout/Column";
 import Row from "~/components/layout/Row";
-import {createSignal, For, JSX, onCleanup, onMount} from "solid-js";
+import {createSignal, JSX, onCleanup, onMount} from "solid-js";
 import Spacer from "~/components/decoration/Spacer";
 import Divider from "~/components/decoration/Divider";
-import {Development, Frameworks} from "~/data/DisplayItems";
+import {Development} from "~/data/DisplayItems";
 import Text from "~/components/typography/Text";
 import {VsCopy, VsLinkExternal} from "solid-icons/vs";
 import {AiOutlineMail} from "solid-icons/ai";
 import {BsDiscord} from "solid-icons/bs";
 import {FaSolidPhone} from "solid-icons/fa";
 import IconButton from "~/components/button/IconButton";
+import DisplayFrameworks from "~/components/Frameworks";
 
 function Experience() {
-    const [currentDev, setCurrentDev] = createSignal(Development[0]);
+    const [typing, setTyping] = createSignal(Development[0]);
     onMount(() => {
         let index = 0;
         const interval = setInterval(() => {
             index++;
-            setCurrentDev(Development[index % Development.length])
+            setTyping(Development[index % Development.length])
         }, 3000)
         onCleanup(() => clearInterval(interval))
     })
@@ -30,13 +31,12 @@ function Experience() {
                     class={`lg:text-3xl text-xl underline font-mono my-12 animate-typing pr-1
                         brightness-75 overflow-hidden border-r-2 border-r-stone-800 dark:border-r-white 
                         whitespace-nowrap`}>
-                    {currentDev()}
+                    {typing()}
                 </Text>
             </code>
         </div>
     </Row>
 }
-
 
 export default function Home() {
     return (
@@ -51,7 +51,7 @@ export default function Home() {
             </Row>
             <Spacer class={"my-10"}/>
             <Column>
-
+                <DisplayFrameworks/>
             </Column>
             <Divider class={"mx-10 my-6"}/>
             <Header size={6} class={"text-center"}>Contact me</Header>
