@@ -14,9 +14,14 @@
 }
 
 body {
-    font-family: "Inter", sans-serif, "JetBrains Mono", monospace;
+    font-family: "Inter", sans-serif;
     @apply m-0 overflow-x-hidden
     bg-stone-200 dark:bg-stone-900;
+}
+
+/* For monospaced text (e.g., code blocks) */
+code, pre {
+    font-family: "JetBrains Mono", monospace;
 }
 
 main {
