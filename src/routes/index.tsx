@@ -59,23 +59,23 @@ export default function Home() {
             </Row>
             <Spacer class={"my-10"}/>
             <Column>
-                <For each={Object.entries(Frameworks)}>{([name, items]) =>
-                    <>
-                        <Divider class={"mx-10 my-6"}/>
-                        <Header class="text-center" size={5}>
-                            <code>{name}</code>
-                        </Header>
-                        <For each={items}>{item =>
-                            <Row class={"justify-evenly"}>
-                                <For each={item}>{language =>
-                                    <LanguageIcon>
-                                        {/*{language.icon()}*/}
-                                    </LanguageIcon>
-                                }</For>
-                            </Row>
-                        }</For>
-                    </>
-                }</For>
+                {/*<For each={Object.entries(Frameworks)}>{([name, items]) =>*/}
+                {/*    <>*/}
+                {/*        <Divider class={"mx-10 my-6"}/>*/}
+                {/*        <Header class="text-center" size={5}>*/}
+                {/*            <code>{name}</code>*/}
+                {/*        </Header>*/}
+                {/*        <For each={items}>{item =>*/}
+                {/*            <Row class={"justify-evenly"}>*/}
+                {/*                <For each={item}>{language =>*/}
+                {/*                    <LanguageIcon>*/}
+                {/*                        {language.icon()}*/}
+                {/*                    </LanguageIcon>*/}
+                {/*                }</For>*/}
+                {/*            </Row>*/}
+                {/*        }</For>*/}
+                {/*    </>*/}
+                {/*}</For>*/}
             </Column>
             <Divider class={"mx-10 my-6"}/>
             <Header size={6} class={"text-center"}>Contact me</Header>
