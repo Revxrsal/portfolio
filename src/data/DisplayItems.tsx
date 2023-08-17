@@ -37,18 +37,18 @@ export const Development = [
 ]
 
 export const Frameworks: Record<string, RowData[]> = {
-    // "JVM / Android": [
-    //     [
-    //         {icon: () => <SiKotlin size={80}/>},
-    //         {icon: () => <FaBrandsJava size={80}/>},
-    //         {icon: () => <SiAndroid size={80}/>}
-    //     ],
-    //     [
-    //         {icon: () => <SiSpringboot size={80}/>},
-    //         {icon: () => <SiJetpackcompose size={80}/>},
-    //         {icon: () => <SiGradle size={80}/>}
-    //     ],
-    // ],
+    "JVM / Android": [
+        [
+            {icon: () => <SiKotlin size={80}/>},
+            {icon: () => <FaBrandsJava size={80}/>},
+            {icon: () => <SiAndroid size={80}/>}
+        ],
+        [
+            {icon: () => <SiSpringboot size={80}/>},
+            {icon: () => <SiJetpackcompose size={80}/>},
+            {icon: () => <SiGradle size={80}/>}
+        ],
+    ],
     "Systems": [
         [
             {icon: () => <SiGo size={80}/>},
@@ -56,23 +56,23 @@ export const Frameworks: Record<string, RowData[]> = {
             {icon: () => <SiUnrealengine size={80}/>}
         ],
     ],
-    // "Web": [
-    //     [
-    //         {icon: () => <SiHtml5 size={80}/>},
-    //         {icon: () => <SiJavascript size={80}/>},
-    //         {icon: () => <SiTypescript size={80}/>},
-    //     ],
-    //     [
-    //         {icon: () => <SiSolid size={80}/>},
-    //         {icon: () => <SiTauri size={80}/>},
-    //         {icon: () => <SiTailwindcss size={80}/>},
-    //     ],
-    //     [
-    //         {icon: () => <SiSvelte size={80}/>},
-    //         {icon: () => <SiReact size={80}/>},
-    //         {icon: () => <SiNextdotjs size={80}/>},
-    //     ]
-    // ],
+    "Web": [
+        [
+            {icon: () => <SiHtml5 size={80}/>},
+            {icon: () => <SiJavascript size={80}/>},
+            {icon: () => <SiTypescript size={80}/>},
+        ],
+        [
+            {icon: () => <SiSolid size={80}/>},
+            {icon: () => <SiTauri size={80}/>},
+            {icon: () => <SiTailwindcss size={80}/>},
+        ],
+        [
+            {icon: () => <SiSvelte size={80}/>},
+            {icon: () => <SiReact size={80}/>},
+            {icon: () => <SiNextdotjs size={80}/>},
+        ]
+    ],
     "Databases": [
         [
             {icon: () => <SiFirebase size={80}/>},
