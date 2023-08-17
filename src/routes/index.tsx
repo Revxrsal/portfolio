@@ -47,7 +47,7 @@ export default function Home() {
                         <Experience/>
                     </Column>
                     <img src="/desktop-computer.png" alt="Desktop computer"
-                         class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
+                         class={"lg:w-96 lg:h-96 w-48 h-48 animate-float invisible lg:visible image-non-draggable my-12"}/>
                 </Row>
             </Column>
             <Column>
