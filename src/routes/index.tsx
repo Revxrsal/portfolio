@@ -22,12 +22,12 @@ function Experience() {
         }, 3000)
         onCleanup(() => clearInterval(interval))
     })
-    return <Row class={"justify-evenly"}>
+    return <Row class={"items-center justify-between w-96"}>
         <Header size={3} class={"lg:text-3xl text-xl mr-3 whitespace-nowrap"}>I've done</Header>
         <div class={"w-max"}>
             <code>
                 <Text
-                    class={`lg:text-3xl min-w-full text-xl underline font-mono my-12 animate-typing pr-1
+                    class={`lg:text-3xl text-xl underline font-mono my-12 animate-typing pr-1
                         brightness-75 overflow-hidden border-r-2 border-r-stone-800 dark:border-r-white 
                         whitespace-nowrap`}>
                     {typing()}
@@ -41,10 +41,14 @@ export default function Home() {
     return (
         <main>
             <Column center>
-                <Text class={"text-5xl lg:text-7xl font-bold m-3 lg:m-12"}>Hello 👋 I'm Ali </Text>
-                <Experience/>
-                <img src="/desktop-computer.png" alt="Desktop computer"
-                     class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
+                <Row class={"justify-evenly w-full"}>
+                    <Column>
+                        <Text class={"text-5xl lg:text-7xl font-bold m-3 lg:m-12"}>Hello 👋 I'm Ali </Text>
+                        <Experience/>
+                    </Column>
+                    <img src="/desktop-computer.png" alt="Desktop computer"
+                         class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
+                </Row>
             </Column>
             <Column>
                 <DisplayFrameworks/>
