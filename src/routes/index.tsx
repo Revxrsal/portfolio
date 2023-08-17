@@ -69,7 +69,7 @@ export default function Home() {
                             <Row class={"justify-evenly"}>
                                 <For each={item}>{language =>
                                     <LanguageIcon>
-                                        {language.icon()}
+                                        {/*{language.icon()}*/}
                                     </LanguageIcon>
                                 }</For>
                             </Row>
