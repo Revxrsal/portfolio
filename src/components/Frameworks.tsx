@@ -8,7 +8,7 @@ function LanguageIcon(props: {
     children: JSX.Element;
 }) {
     return <div class={`p-4 m-3 rounded bg-stone-950 fill ring-stone-200 hover:brightness-150
-     hover:scale-105 hover:ring-2 hover:ring-emerald-800 transition-all`}>
+     hover:scale-105 hover:ring-2 hover:ring-emerald-800 transition-all cursor-pointer`}>
         {props.children}
     </div>
 }
