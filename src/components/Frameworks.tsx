@@ -16,8 +16,7 @@ function LanguageIcon(props: {
 export default function DisplayFrameworks() {
     return <For each={Object.entries(Frameworks)}>{([name, items]) =>
         <>
-            <Divider class={"mx-10 my-6"}/>
-            <Header class="text-center" size={5}>
+              <Header class="text-center" size={5}>
                 <code>{name}</code>
             </Header>
             <For each={items}>{item =>
@@ -29,6 +28,7 @@ export default function DisplayFrameworks() {
                     }</For>
                 </Row>
             }</For>
+            <Divider class={"mx-10 my-6"}/>
         </>
     }</For>;
 }
