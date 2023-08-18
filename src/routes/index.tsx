@@ -28,7 +28,7 @@ export default function Home() {
                     </Text>
                 </Column>
                 <img src="/desktop-computer.png" alt="Desktop computer"
-                     class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
+                     class={"lg:w-96 lg:h-96 md:w-48 md:h-48 w-32 h-32 animate-float image-non-draggable my-12"}/>
             </Flex>
 
             <Divider class={"mx-10 my-6"}/>
