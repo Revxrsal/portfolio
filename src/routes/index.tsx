@@ -8,14 +8,15 @@ import {VsCopy, VsLinkExternal} from "~/components/icons/vs";
 import IconButton from "~/components/button/IconButton";
 import Flex from "~/components/layout/Flex";
 import Divider from "~/components/decoration/Divider";
-import Biography from "~/components/Biography";
-import {MyStory} from "~/data/Biography";
-import DisplayFrameworks from "~/components/Frameworks";
-import {AiOutlineMail} from "~/components/icons/ai";
+ import {AiOutlineMail} from "~/components/icons/ai";
 import {BsDiscord} from "~/components/icons/bs";
 import {FaSolidPhone} from "~/components/icons/fa";
+import {useNavigate} from "@solidjs/router";
+import Button from "~/components/input/Button";
+import DisplayFrameworks from "~/components/Frameworks";
 
 export default function Home() {
+    const navigate = useNavigate();
     return (
         <main>
             <Flex class={"center flex-col lg:flex-row justify-evenly"}>
@@ -32,37 +33,45 @@ export default function Home() {
             </Flex>
 
             <Divider class={"mx-10 my-6"}/>
-            <Column class={"mx-12"}>
-                <Header size={5}>My Checkpoints</Header>
-                <Spacer class={"my-4"}/>
-                <Biography story={MyStory}/>
+            <Column class={"mx-12"} center>
+                <Header size={5} class={"text-center"}>My Story</Header>
+                <Button
+                    onClick={() => navigate("/story")}
+                    class={`text-2xl`}
+                >
+                    Click here to read it!
+                </Button>
+                <Divider class={"m-4 mt-10 w-full"}/>
             </Column>
             <Header size={6} class={"text-center"}>My Experience</Header>
             <Header size={2} class={"my-0 text-center font-normal"}>(Click on any block to see my projects!)</Header>
             <DisplayFrameworks/>
 
             <Header size={6} class={"text-center"}>Contact me</Header>
-            <ContactInfo
-                onExternal={() => console.log()}
-                icon={<AiOutlineMail size={36}/>}
-                title={"E-mail"}
-                value={"business@kasasbeh.net"}
-            />
-            <ContactInfo
-                onExternal={() => console.log()}
-                icon={<BsDiscord size={36}/>}
-                title={"Discord"}
-                value={"@revxrsal"}
-            />
-            <ContactInfo
-                onExternal={() => console.log()}
-                icon={<FaSolidPhone size={30}/>}
-                title={"Phone number"}
-                value={"TBA"}
-            />
+            <ContactDetails/>
             <Spacer class={"my-5"}/>
         </main>
     );
+}
+
+function ContactDetails() {
+    return <>
+        <ContactInfo
+            onExternal={() => console.log()}
+            icon={<AiOutlineMail size={36}/>}
+            title={"E-mail"}
+            value={"business@kasasbeh.net"}/>
+        <ContactInfo
+            onExternal={() => console.log()}
+            icon={<BsDiscord size={36}/>}
+            title={"Discord"}
+            value={"@revxrsal"}/>
+        <ContactInfo
+            onExternal={() => console.log()}
+            icon={<FaSolidPhone size={30}/>}
+            title={"Phone number"}
+            value={"TBA"}/>
+    </>
 }
 
 function ContactInfo(props: {
