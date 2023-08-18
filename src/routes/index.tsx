@@ -5,26 +5,42 @@ import {JSX} from "solid-js";
 import Spacer from "~/components/decoration/Spacer";
 import Text from "~/components/typography/Text";
 import {VsCopy, VsLinkExternal} from "~/components/icons/vs";
+import IconButton from "~/components/button/IconButton";
+import Flex from "~/components/layout/Flex";
+import Divider from "~/components/decoration/Divider";
+import Biography from "~/components/Biography";
+import {MyStory} from "~/data/Biography";
+import DisplayFrameworks from "~/components/Frameworks";
 import {AiOutlineMail} from "~/components/icons/ai";
 import {BsDiscord} from "~/components/icons/bs";
 import {FaSolidPhone} from "~/components/icons/fa";
-import IconButton from "~/components/button/IconButton";
-import DisplayFrameworks from "~/components/Frameworks";
-import Flex from "~/components/layout/Flex";
 
 export default function Home() {
     return (
         <main>
             <Flex class={"center flex-col lg:flex-row justify-evenly"}>
-                <Text class={"text-6xl lg:text-7xl font-bold lg:m-12 text-center"}>
-                    Hello 👋 <span class={"visible lg:sr-only"}><br/></span> I'm Ali
-                </Text>
+                <Column class={"center"}>
+                    <Text class={"text-6xl lg:text-7xl font-bold lg:m-12 text-center"}>
+                        Hello 👋 <span class={"visible lg:sr-only"}><br/></span> I'm Ali
+                    </Text>
+                    <Text class={"text-3xl lg:text-4xl w-96 lg:m-12 text-center leading-relaxed"}>
+                        Mastering the wizardry of computers since 2015
+                    </Text>
+                </Column>
                 <img src="/desktop-computer.png" alt="Desktop computer"
                      class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
             </Flex>
-            <Column>
-                <DisplayFrameworks/>
+
+            <Divider class={"mx-10 my-6"}/>
+            <Column class={"mx-12"}>
+                <Header size={5}>My Checkpoints</Header>
+                <Spacer class={"my-4"}/>
+                <Biography story={MyStory}/>
             </Column>
+            <Header size={6} class={"text-center"}>My Experience</Header>
+            <Header size={2} class={"my-0 text-center font-normal"}>(Click on any block to see my projects!)</Header>
+            <DisplayFrameworks/>
+
             <Header size={6} class={"text-center"}>Contact me</Header>
             <ContactInfo
                 onExternal={() => console.log()}
