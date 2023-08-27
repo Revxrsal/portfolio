@@ -27,7 +27,9 @@ import {JSX} from "solid-js";
 import {FaBrandsJava} from "~/components/icons/fa";
 
 export interface FrameworkItem {
-    icon: () => JSX.Element
+    title?: string;
+    id?: string;
+    icon: () => JSX.Element;
 }
 
 export type RowData = [FrameworkItem, FrameworkItem, FrameworkItem]
@@ -35,38 +37,108 @@ export type RowData = [FrameworkItem, FrameworkItem, FrameworkItem]
 export const Frameworks: Record<string, RowData[]> = {
     "JVM / Android": [
         [
-            {icon: () => <SiKotlin size={80}/>},
-            {icon: () => <FaBrandsJava size={80}/>},
-            {icon: () => <SiAndroid size={80}/>}
+            {
+                title: "Kotlin",
+                id: "kotlin",
+                icon: () => <SiKotlin size={80}/>,
+            },
+            {
+                title: "Java",
+                id: "java",
+                icon: () => <FaBrandsJava size={80}/>
+            },
+            {
+                title: "Android",
+                id: "kotlin",
+                icon: () => <SiAndroid size={80}/>
+            }
         ],
         [
-            {icon: () => <SiSpringboot size={80}/>},
-            {icon: () => <SiJetpackcompose size={80}/>},
-            {icon: () => <SiGradle size={80}/>}
+            {
+                title: "Spring Boot",
+                id: "spring-boot",
+                icon: () => <SiSpringboot size={80}/>
+            },
+            {
+                title: "JetPack Compose",
+                id: "kotlin",
+                icon: () => <SiJetpackcompose size={80}/>
+            },
+            {
+                title: "Gradle",
+                icon: () => <SiGradle size={80}/>
+            }
         ],
     ],
     "Systems": [
         [
-            {icon: () => <SiGo size={80}/>},
-            {icon: () => <SiRust size={80}/>},
-            {icon: () => <SiUnrealengine size={80}/>}
+            {
+                title: "GoLang",
+                id: "systems",
+                icon: () => <SiGo size={80}/>,
+            },
+            {
+                title: "Rust",
+                id: "systems",
+                icon: () => <SiRust size={80}/>
+            },
+            {
+                title: "Unreal Engine",
+                icon: () => <SiUnrealengine size={80}/>
+            }
         ],
     ],
     "Web": [
         [
-            {icon: () => <SiHtml5 size={80}/>},
-            {icon: () => <SiJavascript size={80}/>},
-            {icon: () => <SiTypescript size={80}/>},
+            {
+                title: "HTML",
+                id: "web",
+                icon: () => <SiHtml5 size={80}/>
+            },
+            {
+                title: "JavaScript",
+                id: "web",
+                icon: () => <SiJavascript size={80}/>
+            },
+            {
+                title: "TypeScript",
+                id: "web",
+                icon: () => <SiTypescript size={80}/>
+            },
         ],
         [
-            {icon: () => <SiSolid size={80}/>},
-            {icon: () => <SiTauri size={80}/>},
-            {icon: () => <SiTailwindcss size={80}/>},
+            {
+                title: "SolidJS",
+                id: "web",
+                icon: () => <SiSolid size={80}/>
+            },
+            {
+                title: "HTML",
+                id: "web",
+                icon: () => <SiTauri size={80}/>
+            },
+            {
+                title: "TailwindCSS",
+                id: "web",
+                icon: () => <SiTailwindcss size={80}/>
+            },
         ],
         [
-            {icon: () => <SiSvelte size={80}/>},
-            {icon: () => <SiReact size={80}/>},
-            {icon: () => <SiNextdotjs size={80}/>},
+            {
+                title: "Svelte",
+                id: "web",
+                icon: () => <SiSvelte size={80}/>
+            },
+            {
+                title: "React",
+                id: "web",
+                icon: () => <SiReact size={80}/>
+            },
+            {
+                title: "NextJS",
+                id: "web",
+                icon: () => <SiNextdotjs size={80}/>
+            },
         ]
     ],
     "Databases": [

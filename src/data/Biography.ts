@@ -4,7 +4,7 @@ export const MyStory: StoryEntry[] = [
     {
         title: "Writing code for the first time",
         content: "It all started back in 2015, when I, as a kid, saw a friend building a " +
-            "Minecraft plugin. I immediately felt jealousy blowing throw my " +
+            "Minecraft plugin. I immediately felt jealousy blowing through my " +
             "veins. \"He has superpowers!\" I thought.",
         image: "/biography/bukkit.png",
         alt: "Minecraft Bukkit plugins"

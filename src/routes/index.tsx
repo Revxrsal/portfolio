@@ -24,12 +24,12 @@ export default function Home() {
                     <Text class={"text-6xl lg:text-7xl font-bold lg:m-12 text-center"}>
                         Hello 👋 <span class={"visible lg:sr-only"}><br/></span> I'm Ali
                     </Text>
-                    <Text class={"text-3xl lg:text-4xl w-96 lg:m-12 text-center leading-relaxed"}>
-                        Mastering the wizardry of computers since 2015
+                    <Text class={"text-3xl lg:text-4xl w-fit my-6 lg:my-12 text-center leading-relaxed"}>
+                        Speaking the language of computers since 2015
                     </Text>
                 </Column>
                 <img src="/desktop-computer.png" alt="Desktop computer"
-                     class={"lg:w-96 lg:h-96 md:w-48 md:h-48 w-32 h-32 animate-float image-non-draggable my-12"}/>
+                     class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
             </Flex>
 
             <Divider class={"mx-10 my-6"}/>

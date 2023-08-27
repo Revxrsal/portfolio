@@ -51,4 +51,8 @@ main {
         -webkit-user-select: none;
         -ms-user-select: none;
     }
+
+    .emerald-hover {
+        @apply hover:text-stone-100 hover:scale-105 hover:ring-2 hover:ring-emerald-800 transition-all cursor-pointer;
+    }
 }
