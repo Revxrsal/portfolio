@@ -1,4 +1,4 @@
-import {IoClose} from "~/components/icons/io";
+import {IoClose} from "solid-icons/io";
 import {Accessor, createEffect, JSX, onCleanup, Setter, Show} from "solid-js";
 import "./Modal.css";
 

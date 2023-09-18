@@ -1,41 +1,29 @@
 import Divider from "~/components/decoration/Divider";
 import Header from "~/components/typography/Header";
-import {ComponentProps, For, JSX, splitProps} from "solid-js";
+import {For} from "solid-js";
 import Row from "~/components/layout/Row";
-import {FrameworkItem, Frameworks} from "~/data/DisplayItems";
-import {useNavigate} from "@solidjs/router";
+import Projects from "~/data/Projects";
+import ProjectCard from "~/components/projects/ProjectCard";
 
-export interface LanguageIconProps extends ComponentProps<"div"> {
-    class?: string
-}
+// export interface LanguageIconProps extends ComponentProps<"div"> {
+//     class?: string
+// }
+//
+// function LanguageIcon(props: LanguageIconProps) {
+//     const [local, div] = splitProps(props, ["class"]);
+//     return <div
+//         class={`p-4 m-3 rounded bg-stone-950 fill ring-stone-200 transition-all ${local.class || ""}`} {...div}/>
+// }
 
-function LanguageIcon(props: LanguageIconProps) {
-    const [local, div] = splitProps(props, ["class"]);
-    return <div class={`p-4 m-3 rounded bg-stone-950 fill ring-stone-200 transition-all ${local.class || ""}`} {...div}/>
-}
-
-export default function DisplayFrameworks() {
-    function clickable(item: FrameworkItem): boolean {
-        return item.id != undefined
-    }
-
-    const navigate = useNavigate();
-    return <For each={Object.entries(Frameworks)}>{([name, items]) =>
+export default function MyProjects() {
+    return <For each={Object.entries(Projects)}>{([name, projects]) =>
         <>
             <Header class="text-center" size={5}>
-                <code>{name}</code>
+                {name}
             </Header>
-            <For each={items}>{item =>
+            <For each={projects}>{project =>
                 <Row class={"justify-evenly"}>
-                    <For each={item}>{language =>
-                        <LanguageIcon
-                            class={`${clickable(language) ? "emerald-hover" : ""}`}
-                            onClick={() => {
-                                if (clickable(language)) navigate(`/experience/${language.id}`)
-                            }}>
-                            {language.icon()}
-                        </LanguageIcon>
-                    }</For>
+                    <ProjectCard project={project}/>
                 </Row>
             }</For>
             <Divider class={"mx-10 my-6"}/>
