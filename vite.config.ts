@@ -3,6 +3,9 @@ import {defineConfig} from "vite";
 import vercel from "solid-start-vercel";
 
 export default defineConfig({
+    build: {
+        target: 'esm',
+    },
     plugins: [
         solid({adapter: vercel({edge: true})})
     ],
