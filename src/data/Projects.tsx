@@ -12,8 +12,8 @@ import {
     SiTypescript,
     SiVite,
     SiWindows
-} from "solid-icons/si";
-import {FaBrandsJava} from "solid-icons/fa";
+} from "~/components/icons/si";
+import {FaBrandsJava} from "~/components/icons/fa";
 import {JSX} from "solid-js";
 
 export interface Project {

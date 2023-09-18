@@ -2,7 +2,7 @@ import {For, Show} from "solid-js";
 import Text from "~/components/typography/Text";
 import Row from "~/components/layout/Row";
 import Column from "~/components/layout/Column";
-import {VsLinkExternal} from "solid-icons/vs";
+import {VsLinkExternal} from "~/components/icons/vs";
 import IconButton from "~/components/button/IconButton";
 import {Project} from "~/data/projects";
 
