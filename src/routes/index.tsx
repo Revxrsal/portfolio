@@ -8,12 +8,26 @@ import {VsCopy, VsLinkExternal} from "solid-icons/vs";
 import IconButton from "~/components/button/IconButton";
 import Flex from "~/components/layout/Flex";
 import Divider from "~/components/decoration/Divider";
- import {AiOutlineMail} from "solid-icons/ai";
-import {BsDiscord} from "solid-icons/bs";
-import {FaSolidPhone} from "solid-icons/fa";
+import {AiOutlineMail} from "solid-icons/ai";
+import {BsDiscord, BsGithub, BsLinkedin} from "solid-icons/bs";
+import {FaBrandsGithub} from "solid-icons/fa";
 import {useNavigate} from "@solidjs/router";
 import Button from "~/components/input/Button";
 import MyProjects from "~/components/Frameworks";
+
+function ProfileButton(props: {
+    children: JSX.Element,
+    onClick: () => void
+}) {
+    return (
+        <Flex
+            class={"mx-4 bg-stone-950 emerald-hover w-16 h-16 rounded-md center justify-center fill-stone-200 text-stone-200"}
+            onClick={props.onClick}
+        >
+            {props.children}
+        </Flex>
+    )
+}
 
 export default function Home() {
     const navigate = useNavigate();
@@ -22,14 +36,29 @@ export default function Home() {
             <Flex class={"center flex-col lg:flex-row justify-evenly"}>
                 <Column class={"center"}>
                     <Text class={"text-6xl lg:text-7xl font-bold lg:m-12 text-center"}>
-                        Hello 👋 <span class={"visible lg:sr-only"}><br/></span> I'm Ali
+                        Hello👋<span class={"visible lg:sr-only"}><br/></span> I'm Ali
                     </Text>
                     <Text class={"text-3xl lg:text-4xl p-6 text-center leading-relaxed"}>
                         Speaking the language of computers since 2015
                     </Text>
+                    <Row class={"justify-around"}>
+                        <ProfileButton onClick={() => window.open("https://github.com/Revxrsal", "_blank")}>
+                            <BsGithub size={40}/>
+                        </ProfileButton>
+                        <ProfileButton onClick={() => window.open("https://www.linkedin.com/in/ali-kasasbeh-b3a595288/", "_blank")}>
+                            <BsLinkedin size={40}/>
+                        </ProfileButton>
+                    </Row>
+                    <Spacer class={"mt-8"}/>
+                    <Button>
+                        My resume
+                    </Button>
                 </Column>
-                <img src="/desktop-computer.png" alt="Desktop computer"
-                     class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}/>
+                <img
+                    src="/desktop-computer.png"
+                    alt="Desktop computer"
+                    class={"lg:w-96 lg:h-96 w-48 h-48 animate-float image-non-draggable my-12"}
+                />
             </Flex>
 
             <Divider class={"mx-10 my-6"}/>
@@ -59,17 +88,18 @@ function ContactDetails() {
             onExternal={() => console.log()}
             icon={<AiOutlineMail size={36}/>}
             title={"E-mail"}
-            value={"business@kasasbeh.net"}/>
+            subtitle={"business@kasasbeh.net"}/>
         <ContactInfo
             onExternal={() => console.log()}
             icon={<BsDiscord size={36}/>}
             title={"Discord"}
-            value={"@revxrsal"}/>
+            subtitle={"@revxrsal"}/>
         <ContactInfo
-            onExternal={() => console.log()}
-            icon={<FaSolidPhone size={30}/>}
-            title={"Phone number"}
-            value={"TBA"}/>
+            onExternal={() => window.open("https://github.com/Revxrsal", "_blank")}
+            icon={<FaBrandsGithub size={30}/>}
+            title={"GitHub"}
+            subtitle={"@Revxrsal"}
+            linkToCopy={"https://github.com/Revxrsal"}/>
     </>
 }
 
@@ -77,7 +107,8 @@ function ContactInfo(props: {
     onExternal: () => void,
     icon: JSX.Element,
     title: string,
-    value: string
+    subtitle: string,
+    linkToCopy?: string
 }) {
     return <Row class={`lg:w-[36rem] w-96 m-3 bg-stone-950 rounded-md p-5 mx-auto justify-between`}>
         <Column>
@@ -90,12 +121,12 @@ function ContactInfo(props: {
             </Row>
             <Spacer class={"my-3"}/>
             <Row>
-                <Text class={"text-xl"}>{props.value}</Text>
+                <Text class={"text-xl"}>{props.subtitle}</Text>
                 <Spacer class={"mx-2"}/>
             </Row>
         </Column>
         <Row class={"justify-around"}>
-            <IconButton onClick={async () => await navigator.clipboard.writeText(props.value)}>
+            <IconButton onClick={async () => await navigator.clipboard.writeText(props.linkToCopy || props.subtitle)}>
                 <VsCopy size={30}/>
             </IconButton>
             <Spacer class={"mx-2"}/>
