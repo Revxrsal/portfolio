@@ -9,6 +9,7 @@
   "dependencies": {
     "@solidjs/router": "^0.12.4",
     "@solidjs/start": "^0.5.9",
+    "@vercel/analytics": "^1.2.2",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "solid-icons": "^1.1.0",
