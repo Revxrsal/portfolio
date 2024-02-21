@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    @apply m-0 overflow-x-hidden
+    bg-stone-200 dark:bg-stone-900;
+}
+
+/* For monospaced text (e.g., code blocks) */
+code, pre {
+    font-family: "JetBrains Mono", monospace;
+}
+
+main {
+    @apply relative flex flex-col pt-[150px] pb-[89px] min-w-full min-h-screen;
+}
+
+@layer components {
+    .text {
+        @apply text-stone-800 dark:text-stone-200
+        selection:bg-emerald-500 dark:selection:bg-emerald-700
+        selection:bg-opacity-50 dark:selection:bg-opacity-50;
+    }
+
+    .fill {
+        @apply fill-stone-800 dark:fill-stone-200;
+    }
+
+    .center {
+        @apply items-center content-center text-center;
+    }
+
+    .image-non-draggable {
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .emerald-hover {
+        @apply hover:text-stone-100 hover:scale-105 hover:ring-2 hover:ring-emerald-800 transition-all cursor-pointer;
+    }
+}
