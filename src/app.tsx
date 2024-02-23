@@ -6,13 +6,14 @@ import "./app.css";
 import TopWave from "~/components/wave/TopWave";
 import BottomWave from "~/components/wave/BottomWave";
 import {inject} from "@vercel/analytics";
+import {MetaProvider} from "@solidjs/meta";
 
 export default function App() {
   onMount(inject)
   return (
     <Router
       root={props => (
-        <>
+        <MetaProvider>
           <Suspense>
             <header class={"absolute w-full"}>
               <TopWave/>
@@ -22,7 +23,7 @@ export default function App() {
               <BottomWave/>
             </footer>
           </Suspense>
-        </>
+        </MetaProvider>
       )}
     >
       <FileRoutes/>
